@@ -1,0 +1,44 @@
+{
+  "dependencies": {
+    "@types/jest": "24.0.16",
+    "@types/node": "12.6.9",
+    "@types/react": "16.8.24",
+    "@types/react-dom": "16.8.5",
+    "apollo-boost": "^0.4.3",
+    "graphql": "^14.4.2",
+    "graphql-tag": "^2.10.1",
+    "react": "^16.8.6",
+    "react-apollo": "^2.5.8",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "typescript": "3.5.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "download-schema": "apollo schema:download --endpoint=http://localhost:4000 src/types/graphql-schema.json",
+    "generate-types": "apollo codegen:generate --localSchemaFile=src/types/graphql-schema.json --target=typescript --outputFlat --includes=src/**/*.{ts,tsx} --tagName=gql --addTypename --globalTypesFile=src/types/graphql-global-types.ts src/types",
+    "apollo-type-watch": "yarn download-schema && yarn generate-types --watch"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.2.3",
+    "apollo": "^2.16.3"
+  }
+}
