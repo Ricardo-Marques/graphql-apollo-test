@@ -13,6 +13,7 @@ const QUESTION_CATEGORIES_QUERY = gql`
   query QuestionCategoriesQuery {
     questionCategories {
       id
+      title
     }
   }
 `

@@ -9,6 +9,7 @@
 export interface QuestionCategoriesQuery_questionCategories {
   __typename: "QuestionCategory";
   id: string;
+  title: string;
 }
 
 export interface QuestionCategoriesQuery {

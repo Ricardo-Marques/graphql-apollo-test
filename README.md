@@ -12,3 +12,9 @@ Setup client
 1. Install dependencies - `cd client && yarn install`
 2. Auto-generate typescript interfaces for every gql query - `yarn apollo-type-watch`
 3. Start client in watch mode - `yarn start`
+
+---
+
+TODO
+
+[Add request cache](https://www.apollographql.com/docs/react/recipes/performance/)
